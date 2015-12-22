@@ -1,0 +1,30 @@
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="~/Scripts/libs/angular.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/libs/angular-route.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/libs/angular-resourse.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/app/module.js"></script>
+    <script type="text/javascript" src="~/Scripts/app/service.js"></script>*@
+
+    @Scripts.Render("~/bundle/Scripts");
+    @Styles.Render("~/bundles/Content");
+</head>
+<body data-ng-app="ApplicationModule">
+    <div class="container body-content">
+        <div>
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+</html>
+
+

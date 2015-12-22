@@ -1,0 +1,50 @@
+﻿
+
+
+<div>
+    <div class="row" ng-hide="status">
+        <div class="col-md-12">
+            <div class="text-center">
+                <i class="fa  fa-refresh fa-spin fa-3x"></i>
+                <h2>loading...</h2>
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered sizes" ng-show="status" >
+        <tr>
+            <th>
+                < 10 MB
+            </th>
+            <th>
+                10 < MB & < 50 MB
+            </th>
+            <th>
+                > 100 MB
+            </th>
+        </tr>
+        <tr>
+            <td>
+                {{sizes.to_ten}}
+            </td>
+            <td>
+                {{sizes.ten_to_fifty}}
+            </td>
+            <td>
+                {{sizes.above_hundred}}
+            </td>
+        </tr>
+    </table>
+    <div class="list">
+        <p>Current path: {{current}}</p>
+
+        <a href="#/showcontent/{{content.parent.FullPath}}">...</a>
+        <div ng-repeat="dir in content.directories">
+            <a href="#/showcontent/{{dir.FullPath}}">{{dir.OriginalPath}}</a>
+        </div>
+        <div ng-repeat="file in content.files">
+            <span>{{file.OriginalPath}}</span>
+        </div>
+    </div>
+    
+    <p>{{error}}</p>
+</div>

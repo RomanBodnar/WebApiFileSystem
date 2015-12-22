@@ -1,0 +1,10 @@
+﻿
+<div ng-controller="drivesController">
+    <h4>Drives:</h4>
+    <div ng-repeat="drive in drives">
+        <a href="#/showcontent/{{drive}}"><span class="list">{{drive}}</span></a>
+    </div>
+   
+</div>
+
+<p>{{error}}</p>
